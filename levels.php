@@ -19,10 +19,10 @@ $api->sendMessage(['text' => 'Salom', 'parse_mode' => 'HTML']);
 */
 $text = strtolower($text);
 
-if ($lvl == 1) {
+if ($lvl == 5) {
 	
 	if ($bot->text('/start')) {
-		$api->sendMessage(['text' => "<code>~bash@ $ >lvl 1\n~bash@ $ password:</code>", 'parse_mode' => 'html']);
+		$api->sendMessage(['text' => "<code>~bash@ $ >lvl 5\n~bash@ $ password:</code>", 'parse_mode' => 'html']);
 		exit;
 	} else {
 		
@@ -45,9 +45,9 @@ if ($lvl == 1) {
 		}
 		
 		elseif ($bot->text('community')) {
-			$answer .= "~bash@ $ >lvl 1 passed!\n~bash@ $ >lvl 2";
+			$answer .= "~bash@ $ >lvl 5 passed!\n~bash@ $ >lvl 6";
 			$insert = [
-				'lvl' => '2',
+				'lvl' => '6',
 				'chat_id' => $chat_id,
 			];
 			$db->update('users', $insert);
